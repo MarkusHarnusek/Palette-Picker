@@ -28,7 +28,9 @@ __Supported languages__
 ## What does Palette Picker look like
 
 ![main-window-view](https://github.com/user-attachments/assets/ec4e5be1-abc7-4877-9540-77548c89b825)
+
 __Main Window__
 
 ![color-picker-view](https://github.com/user-attachments/assets/fabe852f-9208-4470-b491-9b5a234453f9)
+
 __Built-in Color Picker__
