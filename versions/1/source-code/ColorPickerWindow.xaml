@@ -1,0 +1,371 @@
+﻿<Window x:Class="PalettePicker.ColorPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PalettePicker"
+        mc:Ignorable="d"
+        Closed="Window_Closed"
+        Title="Pick Color" 
+        ResizeMode="NoResize"
+        Background="#0B0F0F"
+        Height="330" 
+        Width="370">
+
+    <Window.Resources>
+
+        <SolidColorBrush x:Key="Background" Color="#0B0F0F"/>
+        <SolidColorBrush x:Key="Primary" Color="#2C6FBB"/>
+        <SolidColorBrush x:Key="Text" Color="#FAF9FE"/>
+    </Window.Resources>
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            x:Name="Txt_CurrentEditingColor"
+            Grid.Row="1"
+            Text="Currently editing: colorName"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Foreground="{StaticResource Text}"
+            FontSize="12"
+            FontFamily="Montserrat"
+            FontWeight="Light"
+            Margin="0,5,0,0"/>
+
+        <TextBlock
+            Grid.Row="0"
+            Text="Pick your desired color"
+            Foreground="{StaticResource Text}"
+            HorizontalAlignment="Center"
+            Height="15"
+            FontFamily="Montserrat"
+            FontWeight="SemiBold"
+            FontSize="13"
+            Margin="0,5,0,5"/>
+
+        <Rectangle
+            x:Name="Rct_ColorPreview"
+            Fill="#FF0000"
+            Grid.Row="1"
+            Width="115"
+            Height="115"
+            Margin="10,0,0,45"
+            HorizontalAlignment="Left"/>
+
+        <StackPanel
+            Grid.Row="1"
+            Width="200"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="10,0,10,57">
+
+
+            <TextBlock
+                x:Name="Txt_Hue_Info"
+                HorizontalAlignment="Center"  
+                Text="Color Hue: "
+                Foreground="{StaticResource Text}"
+                FontFamily="Montserrat"
+                FontWeight="Light"
+                FontSize="10"/>
+
+            <StackPanel
+                Height="30"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+
+                <Rectangle
+                    x:Name="Rct_Hue_Preview"
+                    Width="25"
+                    Height="25"
+                    Margin="5,0,5,0"
+                    Fill="#FF0000"/>
+
+                <Button
+                    x:Name="Btn_Hue_Decrease"
+                    Click="Btn_Hue_Decrease_Click"
+                    Width="25"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Foreground="{StaticResource Text}"
+                    Background="{StaticResource Primary}"
+                    BorderThickness="0">
+
+                    <TextBlock
+                        Foreground="{StaticResource Text}"
+                        Background="Transparent"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="◀"
+                        FontFamily="Montserrat"
+                        FontSize="25"
+                        Margin="0,0,0,2">
+                    </TextBlock>
+                </Button>
+
+                <Rectangle
+                    Height="26"
+                    Width="100"
+                    Margin="5,0,5,0">
+
+                    <Rectangle.Fill>
+
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,-0.05">
+
+                            <GradientStop Color="#FF0000" Offset="0"/>
+                            <GradientStop Color="#FFFF00" Offset="0.25"/>
+                            <GradientStop Color="#00FFFF" Offset="0.50"/>
+                            <GradientStop Color="#0000FF" Offset="0.75"/>
+                            <GradientStop Color="#FF0000" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>   
+                </Rectangle>
+
+                <Button
+                    x:Name="Btn_Hue_Increase"
+                    Click="Btn_Hue_Increase_Click"
+                    Width="25"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Foreground="{StaticResource Text}"
+                    Background="{StaticResource Primary}"
+                    BorderThickness="0">
+
+                    <TextBlock
+                        Foreground="{StaticResource Text}"
+                        Background="Transparent"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="▶"
+                        FontFamily="Montserrat"
+                        FontSize="25"
+                        Margin="0,0,0,2">
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+
+            <TextBlock
+                x:Name="Txt_Saturation_Info"
+                Margin="0,2,0,2"
+                HorizontalAlignment="Center"  
+                Text="Color Saturation: "
+                Foreground="{StaticResource Text}"
+                FontFamily="Montserrat"
+                FontWeight="Light"
+                FontSize="10"/>
+
+            <StackPanel
+                Height="30"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+
+                <Rectangle
+                    x:Name="Rct_Saturation_Preview"
+                    Width="25"
+                    Height="25"
+                    Margin="5,0,5,0"
+                    Fill="#FF0000"/>
+
+                <Button
+                    x:Name="Btn_Stauration_Decrease"
+                    Click="Btn_Stauration_Decrease_Click"
+                    Width="25"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Foreground="{StaticResource Text}"
+                    Background="{StaticResource Primary}"
+                    BorderThickness="0">
+
+                    <TextBlock
+                        Foreground="{StaticResource Text}"
+                        Background="Transparent"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="◀"
+                        FontFamily="Montserrat"
+                        FontSize="25"
+                        Margin="0,0,0,2">
+                    </TextBlock>
+                </Button>
+
+                <Rectangle
+                    Height="26"
+                    Width="100"
+                    Margin="5,0,5,0">
+
+                    <Rectangle.Fill>
+
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,-0.05">
+                            <GradientStop 
+                                x:Name="GrS_Color_Saturation_Min"
+                                Color="#FFFFFF" 
+                                Offset="0"/>
+
+                            <GradientStop
+                                x:Name="GrS_Color_Saturation_Max"
+                                Color="#FF0000" 
+                                Offset="1"/>
+                            
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Button
+                    x:Name="Btn_Saturation_Increase"
+                    Click="Btn_Saturation_Increase_Click"
+                    Width="25"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Foreground="{StaticResource Text}"
+                    Background="{StaticResource Primary}"
+                    BorderThickness="0">
+
+                    <TextBlock
+                        Foreground="{StaticResource Text}"
+                        Background="Transparent"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="▶"
+                        FontFamily="Montserrat"
+                        FontSize="25"
+                        Margin="0,0,0,2">
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+
+            <TextBlock
+                x:Name="Txt_Luminance_Info"
+                Margin="0,2,0,2"
+                HorizontalAlignment="Center"  
+                Text="Color Luminance: "
+                Foreground="{StaticResource Text}"
+                FontFamily="Montserrat"
+                FontWeight="Light"
+                FontSize="10"/>
+
+            <StackPanel
+                Height="30"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+                
+                <Rectangle
+                    x:Name="Rct_Luminance_Preview"
+                    Width="25"
+                    Height="25"
+                    Margin="5,0,5,0"
+                    Fill="#FF0000"/>
+
+                <Button
+                    x:Name="Btn_Luminance_Decrease"
+                    Click="Btn_Luminance_Decrease_Click"
+                    Width="25"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Foreground="{StaticResource Text}"
+                    Background="{StaticResource Primary}"
+                    BorderThickness="0">
+
+                    <TextBlock
+                        Foreground="{StaticResource Text}"
+                        Background="Transparent"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="◀"
+                        FontFamily="Montserrat"
+                        FontSize="25"
+                        Margin="0,0,0,2">
+                    </TextBlock>
+                </Button>
+
+                <Rectangle
+                    Height="26"
+                    Width="100"
+                    Margin="5,0,5,0">
+
+                    <Rectangle.Fill>
+
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,-0.05">
+
+                            <GradientStop 
+                                Color="#000000" 
+                                Offset="0"/>
+                            
+                            <GradientStop
+                                x:Name="GrS_Color_Luminace_Normal"
+                                Color="#FF0000" 
+                                Offset="0.5"/>
+                            
+                            <GradientStop 
+                                Color="#FFFFFF" 
+                                Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Button
+                    x:Name="Btn_Luminance_Increase"
+                    Click="Btn_Luminance_Increase_Click"
+                    Width="25"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Foreground="{StaticResource Text}"
+                    Background="{StaticResource Primary}"
+                    BorderThickness="0">
+
+                    <TextBlock
+                        Foreground="{StaticResource Text}"
+                        Background="Transparent"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="▶"
+                        FontFamily="Montserrat"
+                        FontSize="25"
+                        Margin="0,0,0,2">
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBox
+            x:Name="Txb_HexColor"
+            TextChanged="Txb_HexColor_TextChanged" 
+            LostFocus="Txb_HexColor_LostFocus"
+            KeyDown="Txb_HexColor_KeyDown"
+            Text="#FFFFFF"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Grid.Row="1"
+            Margin="0,0,0,65"
+            Width="110"
+            Height="20"
+            BorderBrush="{StaticResource Primary}"
+            Background="{StaticResource Background}"
+            Foreground="{StaticResource Text}"
+            FontFamily="Montserrat"
+            FontWeight="Normal"
+            FontSize="12"/>
+
+        <Button
+            x:Name="Btn_OK"
+            Click="Btn_OK_Click"
+            Margin="0,0,0,25"
+            Grid.Row="1"
+            Content="OK"
+            FontFamily="Montserrat"
+            Foreground="{StaticResource Text}"
+            Background="{StaticResource Primary}"
+            BorderThickness="0"
+            Width="50"
+            Height="20"
+            VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
