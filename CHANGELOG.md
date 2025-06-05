@@ -22,3 +22,7 @@ Here you will be able to view all the changelogs from all the different versions
 
  - Added missing save selection dialog title translation
  - Removed unused nuget package
+
+## Version 1.2
+
+ - Replaced static Window resources with application wide dynamic resources
