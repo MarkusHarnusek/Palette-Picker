@@ -1,0 +1,14 @@
+﻿<Application x:Class="PalettePicker.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PalettePicker"
+             StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+        <SolidColorBrush x:Key="P1" Color="#070d0d" />
+        <SolidColorBrush x:Key="P2" Color="#002147" />
+        <SolidColorBrush x:Key="S1" Color="#0055bf" />
+        <SolidColorBrush x:Key="S2" Color="#87cefa" />
+        <SolidColorBrush x:Key="T" Color="#eefafb" />
+    </Application.Resources>
+</Application>
