@@ -1,36 +1,38 @@
 # Palette Picker
-## What is Palette Picker?
 
-Palette Picker is a powerfull, easy and free tool for saving color palettes for your creative projects. Generate and edit 5 different colors of your color palette and or edit them manually using the build-in color picker. Save or load your color palettes.
+## Professional Color Palette Management for Creative Projects
 
-## What is a color palette like in Palette Picker
+**Palette Picker** is a robust and user-friendly application designed to streamline the process of creating, editing, and managing color palettes. Whether you are a designer, developer, or creative professional, Palette Picker provides the essential tools to generate, customize and save color schemes efficiently. The application supports both automatic palette generation and precise manual adjustments using an integrated color picker. Save and load palettes with ease to enhance your workflow.
 
-A Palette Picker color palette consists of 5 colors, two primary, two secondary and one text color. You can generate an entire palette or edit each color with the built-in color picker. You can also save these palettes and load them as you wish to.
+---
 
-## What is the built-in color picker?
+## Key Features
 
-The build-in color picker is an easy solution to editing colors in Palette Picker. You can change the Hue, Saturation and Luminance of each color, all while getting live color preview. If playing around with values isn't your thing you can also input a hex color code.
+- **Five-Color Palettes:** Each palette consists of two primary colors, two secondary colors, and one text color, ensuring versatility for a wide range of design needs.
+- **Advanced Color Picker:** Modify Hue, Saturation, and Luminance with real-time previews, or input exact hex codes for precise color selection.
+- **Palette Management:** Save your favorite palettes and reload them as needed, supporting a seamless creative process.
+- **Multilingual Support:** Palette Picker is available in several languages, making it accessible to a global user base. Language preferences can be adjusted in the Options tab. Please note that only English and German translations are fully verified. If you encounter translation issues, your feedback is appreciated.
 
-## What languages does Palette Picker support
+**Supported Languages:**
+- English
+- German
+- Spanish
+- French
+- Chinese (Simplified)
+- Portuguese
+- Russian
 
-Currently Palette Picker supports following languages, application wide. You're able to change the language in the options tab in Palette Picker. Please note that only the English and German translation is veryfied so there might be wrong translations in the other languages. If you find any, please contact me so the issue can be fixed.
+---
 
-__Supported languages__
+## Application Interface
 
- - English
- - German
- - Spanish
- - French
- - Chineese (simplyfied)
- - Portuguese
- - Russian
+![Main Window](https://github.com/user-attachments/assets/ec4e5be1-abc7-4877-9540-77548c89b825)
+*Main Application Window*
 
-## What does Palette Picker look like
+![Color Picker](https://github.com/user-attachments/assets/fabe852f-9208-4470-b491-9b5a234453f9)
 
-![main-window-view](https://github.com/user-attachments/assets/ec4e5be1-abc7-4877-9540-77548c89b825)
+*Integrated Color Picker*
 
-__Main Window__
+---
 
-![color-picker-view](https://github.com/user-attachments/assets/fabe852f-9208-4470-b491-9b5a234453f9)
-
-__Built-in Color Picker__
+Palette Picker is designed to support your creative vision with efficiency and precision. Experience professional color palette management—download and start using Palette Picker today.
