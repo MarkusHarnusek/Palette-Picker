@@ -1,28 +1,38 @@
 # Palette Picker Changelog
 
-Here you will be able to view all the changelogs from all the different versions of palette picker.
+Here you can view the changelogs for all versions of Palette Picker.
 
 ## Version 1
 
- - Released first version
+- Initial release
 
 ## Version 1.1
 
- - Added options tab
- - Added application-wide support for following languages
-    - German
-    - Spanish
-    - French
-    - Chineese (simplyfied)
-    - Portuguese
-    - Russian
- - Adapted UI to fit longer, translated texts
+- Added Options tab
+- Added application-wide support for the following languages:
+  - German
+  - Spanish
+  - French
+  - Chinese (Simplified)
+  - Portuguese
+  - Russian
+- Adapted UI to accommodate longer translated texts
 
 ## Version 1.1.1
 
- - Added missing save selection dialog title translation
- - Removed unused nuget package
+- Added missing translation for the save selection dialog title
+- Removed unused NuGet package
 
 ## Version 1.2
 
- - Replaced static Window resources with application wide dynamic resources
+- Replaced static window resources with application-wide dynamic resources
+
+## Version 1.3
+
+- Completely overhauled the UI to improve aesthetics and user experience
+- Reworked main window saving logic for better clarity
+- Removed palette name text box from the main window as a result of previous changes
+- Improved Options window layout
+- Reworked settings logic: changes are now applied automatically
+- Added new UI templates
+- Added code documentation for multiple classes
