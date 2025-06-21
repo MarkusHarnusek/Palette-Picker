@@ -26,11 +26,11 @@
 
 ## Application Interface
 
-![Main Window](https://github.com/user-attachments/assets/ec4e5be1-abc7-4877-9540-77548c89b825)
+
+![main-window-view](https://github.com/user-attachments/assets/e7db69d9-ba5b-430e-8711-b7800713d1d4)
 *Main Application Window*
 
-![Color Picker](https://github.com/user-attachments/assets/fabe852f-9208-4470-b491-9b5a234453f9)
-
+![color-picker-view](https://github.com/user-attachments/assets/b5e1321f-c6fe-4b55-9ab3-812a36f6d1d5)
 *Integrated Color Picker*
 
 ---
