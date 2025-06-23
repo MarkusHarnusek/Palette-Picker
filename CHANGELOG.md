@@ -46,3 +46,7 @@ Here you can view the changelogs for all versions of Palette Picker.
 ## Version 1.4.1
  
  - Added Main Window Enviornment Exit feature
+
+## Version 1.4.1.1
+
+ - Cleaned up build so it's clean of warnings
