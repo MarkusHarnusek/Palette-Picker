@@ -36,3 +36,9 @@ Here you can view the changelogs for all versions of Palette Picker.
 - Reworked settings logic: changes are now applied automatically
 - Added new UI templates
 - Added code documentation for multiple classes
+
+## Version 1.4
+
+ - Improved hsl value preview
+ - Added repeat click feature to hsl select for better usability
+ - Added saving logic to the color picker
