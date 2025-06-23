@@ -42,3 +42,7 @@ Here you can view the changelogs for all versions of Palette Picker.
  - Improved hsl value preview
  - Added repeat click feature to hsl select for better usability
  - Added saving logic to the color picker
+
+## Version 1.4.1
+ 
+ - Added Main Window Enviornment Exit feature
