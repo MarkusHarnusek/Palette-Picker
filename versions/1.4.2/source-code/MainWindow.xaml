@@ -1,0 +1,460 @@
+﻿<Window x:Class="PalettePicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PalettePicker"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:MainWindow, IsDesignTimeCreatable=True}"
+        ContentRendered="Window_ContentRendered"
+        Closing="Window_Closing"
+        Closed="Window_Closed"
+        ResizeMode="NoResize"
+        Title="Paltette Picker" 
+        Height="520"
+        Width="820"
+        Background="{DynamicResource P1}">
+
+    <StackPanel
+        Margin="20,10,0,0">
+
+        <Border
+            Margin="0,0,0,0"
+            Height="28"
+            Width="375"
+            HorizontalAlignment="Left"
+            BorderBrush="{DynamicResource P2}"
+            BorderThickness="1"
+            CornerRadius="7.5">
+
+            <StackPanel
+                Height="25"
+                Width="370"
+                VerticalAlignment="Center"  
+                HorizontalAlignment="Left"
+                Orientation="Horizontal">
+
+
+                <Button
+                    x:Name="Btn_Select"
+                    Click="Btn_Select_Click"
+                    Style="{StaticResource Font_Size_Up_Button_Style}"
+                    Width="90"
+                    Height="20"
+                    Content="Select"
+                    Margin="2.5,0,0,0"/>
+
+                <Button
+                    x:Name="Btn_Save"
+                    Click="Btn_Save_Click"
+                    Style="{StaticResource Font_Size_Up_Button_Style}"
+                    Width="90"
+                    Height="20"
+                    Content="Save"
+                    Margin="2.5,0,0,0"/>
+
+                <Button
+                    x:Name="Btn_Generate"
+                    Click="Btn_Generate_Click"
+                    Style="{StaticResource Font_Size_Up_Button_Style}"
+                    Width="90"
+                    Height="20"
+                    Content="Generate"
+                    Margin="2.5,0,0,0"/>
+
+                <Button
+                    x:Name="Btn_Options"
+                    Click="Btn_Options_Click"
+                    Style="{StaticResource Font_Size_Up_Button_Style}"
+                    Width="90"
+                    Height="20"
+                    Content="Options"
+                    Margin="2.5,0,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <StackPanel
+            Orientation="Horizontal"
+            Height="340"
+            Width="760"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="0,40,0,0">
+
+            <Border
+                x:Name="Grd_Primary1"
+                Style="{StaticResource Grid_Height_Scale_Up_Style}"
+                Width="152"
+                Background="#FFFFFF">
+
+                <Button
+                    x:Name="Btn_Primary1"
+                    Click="Btn_Primary1_Click"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent">
+
+                    <Button.Template>
+                        
+                        <ControlTemplate 
+                            TargetType="Button">
+                            
+                            <Border
+                                Background="{TemplateBinding Background}">
+                                
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+
+
+            <Grid
+                Margin="-152,0,0,0">
+
+                <Border
+                    Width="115"
+                    Height="60"
+                    Background="{DynamicResource P1}"
+                    CornerRadius="5"
+                    Margin="0,208,0,0"
+                    BorderBrush="{DynamicResource P2}"
+                    BorderThickness="1">
+
+                    <StackPanel>
+
+                        <TextBlock
+                            x:Name="Txt_Primary1Title"
+                            Text="Primary 1"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontSize="14"/>
+
+
+                        <TextBlock
+                            x:Name="Txt_Primary1"
+                            Text="HEX"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontWeight="Light"
+                            FontSize="13"/>
+
+                        <Button
+                            x:Name="Btn_Primary1_Edit"
+                            Click="Btn_Primary1_Edit_Click"
+                            Style="{StaticResource Font_Size_Up_Button_Style}"
+                            Content="Edit"
+                            Height="20"
+                            FontSize="12"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            Margin="2"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border
+                x:Name="Grd_Primary2"
+                Style="{StaticResource Grid_Height_Scale_Up_Style}"
+                Width="152"
+                Background="#FFFFFF">
+
+                <Button
+                    x:Name="Btn_Primary2"
+                    Click="Btn_Primary2_Click"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent">
+
+                    <Button.Template>
+
+                        <ControlTemplate 
+                            TargetType="Button">
+
+                            <Border
+                                Background="{TemplateBinding Background}">
+
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+
+            <Grid
+                Margin="-152,0,0,0">
+
+                <Border
+                    Width="115"
+                    Height="60"
+                    Background="{DynamicResource P1}"
+                    CornerRadius="5"
+                    Margin="0,208,0,0"
+                    BorderBrush="{DynamicResource P2}"
+                    BorderThickness="1">
+
+                    <StackPanel>
+
+                        <TextBlock
+                            x:Name="Txt_Primary2Title"
+                            Text="Primary 2"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontSize="14"/>
+
+
+                        <TextBlock
+                            x:Name="Txt_Primary2"
+                            Text="HEX"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontWeight="Light"
+                            FontSize="13"/>
+
+                        <Button
+                            x:Name="Btn_Primary2_Edit"
+                            Click="Btn_Primary2_Edit_Click"
+                            Style="{StaticResource Font_Size_Up_Button_Style}"
+                            Content="Edit"
+                            Height="20"
+                            FontSize="12"
+                            Margin="2"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border
+                x:Name="Grd_Secondary1"
+                Style="{StaticResource Grid_Height_Scale_Up_Style}"
+                Width="152"
+                Background="#FFFFFF">
+
+                <Button
+                    x:Name="Btn_Secondary1"
+                    Click="Btn_Secondary1_Click"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent">
+
+                    <Button.Template>
+
+                        <ControlTemplate 
+                            TargetType="Button">
+
+                            <Border
+                                Background="{TemplateBinding Background}">
+
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+
+            <Grid
+                Margin="-152,0,0,0">
+                
+                <Border
+                    Width="115"
+                    Height="60"
+                    Background="{DynamicResource P1}"
+                    CornerRadius="5"
+                    Margin="0,208,0,0"
+                    BorderBrush="{DynamicResource P2}"
+                    BorderThickness="1">
+
+                    
+                    <StackPanel>
+
+                        <TextBlock
+                            x:Name="Txt_Secondary1Title"
+                            Text="Secondary 1"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontSize="14"/>
+
+
+                        <TextBlock
+                            x:Name="Txt_Secondary1"
+                            Text="HEX"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontWeight="Light"
+                            FontSize="13"/>
+
+                        <Button
+                            x:Name="Btn_Secondary1_Edit"
+                            Click="Btn_Secondary1_Edit_Click"
+                            Style="{StaticResource Font_Size_Up_Button_Style}"
+                            Content="Edit"
+                            Height="20"
+                            FontSize="12"
+                            Margin="2"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border
+                x:Name="Grd_Secondary2"
+                Style="{StaticResource Grid_Height_Scale_Up_Style}"
+                Width="152"
+                Background="#FFFFFF">
+
+                <Button
+                    x:Name="Btn_Secondary2"
+                    Click="Btn_Secondary2_Click"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent">
+
+                    <Button.Template>
+
+                        <ControlTemplate 
+                            TargetType="Button">
+
+                            <Border
+                                Background="{TemplateBinding Background}">
+
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+
+            <Grid
+                Margin="-152,0,0,0">
+
+                <Border
+                    Width="115"
+                    Height="60"
+                    Background="{DynamicResource P1}"
+                    CornerRadius="5"
+                    Margin="0,208,0,0"
+                    BorderBrush="{DynamicResource P2}"
+                    BorderThickness="1">
+                    
+                    
+                    <StackPanel>
+
+                        <TextBlock
+                            x:Name="Txt_Secondary2Title"
+                            Text="Secondary 2"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontSize="14"/>
+
+
+                        <TextBlock
+                            x:Name="Txt_Secondary2"
+                            Text="HEX"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontWeight="Light"
+                            FontSize="13"/>
+
+                        <Button
+                            x:Name="Btn_Secondary2_Edit"
+                            Click="Btn_Secondary2_Edit_Click"
+                            Style="{StaticResource Font_Size_Up_Button_Style}"
+                            Content="Edit"
+                            Height="20"
+                            FontSize="12"
+                            Margin="2"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border
+                x:Name="Grd_Text"
+                Style="{StaticResource Grid_Height_Scale_Up_Style}"
+                Width="152"
+                Background="#FFFFFF">
+
+                <Button
+                    x:Name="Btn_Text"
+                    Click="Btn_Text_Click"
+                    Background="Transparent"
+                    Foreground="Transparent"
+                    BorderBrush="Transparent">
+
+                    <Button.Template>
+
+                        <ControlTemplate 
+                            TargetType="Button">
+
+                            <Border
+                                Background="{TemplateBinding Background}">
+
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+
+            <Grid
+                Margin="-152,0,0,0">
+
+                <Border
+                    Width="115"
+                    Height="60"
+                    Background="{DynamicResource P1}"
+                    CornerRadius="5"
+                    Margin="0,208,0,0"
+                    BorderBrush="{DynamicResource P2}"
+                    BorderThickness="1">
+
+
+                    <StackPanel>
+
+                        <TextBlock
+                            x:Name="Txt_TextTitle"
+                            Text="Text"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontSize="14"/>
+
+
+                        <TextBlock
+                            x:Name="Txt_Text"
+                            Text="HEX"
+                            HorizontalAlignment="Center"
+                            Foreground="{DynamicResource T}"
+                            FontFamily="{StaticResource MontserratFontFamily}"
+                            FontWeight="Light"
+                            FontSize="13"/>
+
+                        <Button
+                            x:Name="Btn_Text_Edit"
+                            Click="Btn_Text_Edit_Click"
+                            Style="{StaticResource Font_Size_Up_Button_Style}"
+                            Content="Edit"
+                            Height="20"
+                            FontSize="12"
+                            Margin="2"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </StackPanel>
+</Window>

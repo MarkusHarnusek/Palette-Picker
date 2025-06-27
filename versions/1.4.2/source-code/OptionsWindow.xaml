@@ -1,0 +1,149 @@
+﻿<Window x:Class="PalettePicker.OptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PalettePicker"
+        mc:Ignorable="d"
+        Title="Options" 
+        ResizeMode="NoResize"
+        Height="500" 
+        Width="650"
+        Background="{DynamicResource P1}">
+
+    <Grid>
+
+        <TextBlock
+            x:Name="Txt_WindowTitle"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Text="Options"
+            Foreground="{DynamicResource T}"
+            FontFamily="{StaticResource MontserratFontFamily}"
+            FontSize="25"
+            FontWeight="DemiBold"
+            Margin="0,10,0,0"/>
+
+        <StackPanel
+            Margin="0,50,0,0"
+            Orientation="Horizontal">
+
+            <Border
+                Width="210"
+                Height="370"
+                Margin="25,0,0,0"
+                CornerRadius="10"
+                Background="Transparent"
+                BorderBrush="{DynamicResource P2}"
+                BorderThickness="1">
+
+                <StackPanel
+                    x:Name="Stp_SettingsTabs"
+                    Width="200"
+                    Height="360"
+                    HorizontalAlignment="Center">
+
+                    <Button
+                        x:Name="Btn_Language"
+                        Style="{StaticResource Heigth_Fade_Button_Style}"
+                        Click="Btn_Language_Click" 
+                        Content="Language"
+                        FontSize="20"
+                        Height="35"/>
+
+                    <Button
+                        x:Name="Btn_Appearance"
+                        Visibility="Collapsed"
+                        Click="Btn_Appearance_Click"
+                        Style="{StaticResource Heigth_Fade_Button_Style}"
+                        Content="Appearance"
+                        FontSize="20" 
+                        Height="35"/>
+                </StackPanel>
+            </Border>
+
+
+            <Grid
+                Margin="10,0,0,0"
+                Width="375"
+                Height="370">
+
+                <Border
+                    BorderBrush="{DynamicResource P2}"
+                    BorderThickness="1"
+                    CornerRadius="10">
+
+                    <Grid>
+
+                        <Grid
+                            x:Name="Grd_None"
+                            Visibility="Collapsed">
+
+                            <TextBlock
+                                x:Name="Txt_NoGrdSelected"
+                                Text="No settings menu selected"
+                                Foreground="{DynamicResource T}"
+                                FontSize="20"
+                                FontFamily="{StaticResource MontserratFontFamily}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Grid>
+
+                        <Grid
+                            x:Name="Grd_Language"
+                            Visibility="Visible">
+
+                            <TextBlock
+                                x:Name="Txt_Language_Title"
+                                Text="Language"
+                                Foreground="{DynamicResource T}"
+                                FontFamily="{StaticResource MontserratFontFamily}"
+                                FontSize="20"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                Margin="0,5,0,0"/>
+
+                            <StackPanel
+                                Margin="0,40,0,0">
+
+                                <ComboBox
+                                    x:Name="Cmb_Language"
+                                    Style="{StaticResource Combobox_Style}"
+                                    ItemsSource="{Binding MyItems}"
+                                    SelectedIndex="0"
+                                    Width="200"
+                                    Height="25" SelectionChanged="Cmb_Language_SelectionChanged">
+
+                                    <ComboBox.ItemTemplate>
+
+                                        <DataTemplate>
+
+                                            <TextBlock
+                                                Height="20"
+                                                Text="{Binding}"/>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid
+                            x:Name="Grd_Appearance"
+                            Visibility="Collapsed">
+
+                            <TextBlock
+                                x:Name="Txt_Appearance_Title"
+                                Text="Appearance"
+                                Foreground="{DynamicResource T}"
+                                FontFamily="{StaticResource MontserratFontFamily}"
+                                FontSize="20"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                Margin="0,5,0,0"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -50,3 +50,11 @@ Here you can view the changelogs for all versions of Palette Picker.
 ## Version 1.4.1.1
 
  - Cleaned up build so it's clean of warnings
+
+## Version 1.4.2
+ 
+ - Added missing custom font to the project
+ - Added missing translation
+ - Moved translation into window dependant ResX resource files
+ - Removed unused logic
+ - Various backend improvments
